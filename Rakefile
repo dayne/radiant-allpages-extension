@@ -102,7 +102,7 @@ namespace :spec do
   end
 end
 
-desc 'Generate documentation for the all_pages extension.'
+desc 'Generate documentation for the allpages extension.'
 Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title    = 'AllPagesExtension'
@@ -112,7 +112,7 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
 end
 
 # For extensions that are in transition
-desc 'Test the all_pages extension.'
+desc 'Test the allpages extension.'
 Rake::TestTask.new(:test) do |t|
   t.libs << 'lib'
   t.pattern = 'test/**/*_test.rb'

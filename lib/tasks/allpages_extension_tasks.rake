@@ -1,6 +1,6 @@
 namespace :radiant do
   namespace :extensions do
-    namespace :all_pages do
+    namespace :allpages do
       
       desc "Runs the migration of the All Pages extension"
       task :migrate => :environment do

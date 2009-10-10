@@ -3,8 +3,8 @@
 
 class AllPagesExtension < Radiant::Extension
   version "1.0"
-  description "A simple extension to add r:all_pages radius tag"
-  url "http://github.com/dayne/radiant-all_pages-extension"
+  description "A simple extension to add r:allpages radius tag"
+  url "http://github.com/dayne/radiant-allpages-extension"
   
   def activate
     Page.class_eval { include AllPagesTags }
