@@ -24,8 +24,13 @@ module AllpagesTags
   end
 
   desc %{
-    count of all the pages you have in the system? 
+    Usage:
+    <pre><code><r:allpages:count [status="draft|reviewed|published|hidden|all" /></code></pre>
+    Total number of Pages in the system
   }
   tag 'allpages:count' do |tag|
+    options = children_find_options(tag)
+    options.delete(:order) # Order is irrelevant
+    Page.find(:all, options).size
   end
 end
