@@ -1,6 +1,10 @@
 module AllPagesTags
   include Radiant::Taggable
 
+  tag 'all_pages' do |tag|
+    tag.expand
+  end
+
   desc %{
     Usage:
     <pre><code><r:all_pages [offset="number"] [limit="number"]
