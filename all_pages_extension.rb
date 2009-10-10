@@ -3,16 +3,10 @@
 
 class AllPagesExtension < Radiant::Extension
   version "1.0"
-  description "Describe your extension here"
-  url "http://yourwebsite.com/all_pages"
-  
-  # define_routes do |map|
-  #   map.namespace :admin, :member => { :remove => :get } do |admin|
-  #     admin.resources :all_pages
-  #   end
-  # end
+  description "A simple extension to add r:all_pages radius tag"
+  url "http://github.com/dayne/radiant-all_pages-extension"
   
   def activate
-    # admin.nav[:content] << admin.nav_item(:all_pages, "All Pages", "/admin/all_pages"), :after => :pages
+    Page.class_eval { include AllPagesTags }
   end
 end
