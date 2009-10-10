@@ -1,3 +1,27 @@
 = All Pages
 
-Description goes here
+Created by: Dayne Broderson - dayne.broderson.org
+Version: 1.0
+Homepage: dayne.broderson.org/p/radiant-allpages-extension
+
+== Overview
+
+A simple extension that gives you the radius tag <r:allpages:each>
+
+This allows you to write things that apply to all the pages in a non-tree (children) way.  My primary motivation was to have a 'recently modified' page like the example below:
+
+== Example Usage
+Recently modified pages:
+<ul>
+<r:allpages:each order="desc" by="updated_at" status="published">
+  <r:unless_content part="no-map">
+  <li><r:date /> : <r:link /></li>
+  </r:unless_content>
+</r:allpages:each>
+</ul>
+
+= Installing
+
+  cd vender/extensions
+  git clone git://github.com/dayne/radiant-allpages-extension.git allpages
+  # restart radiant
