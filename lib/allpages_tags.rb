@@ -1,4 +1,4 @@
-module AllPagesTags
+module AllpagesTags
   include Radiant::Taggable
 
   tag 'allpages' do |tag|
